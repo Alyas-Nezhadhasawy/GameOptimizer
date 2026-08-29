@@ -1,0 +1,163 @@
+"""
+Genre-based settings templates.
+--------------------------------
+Writing hyper-specific, verified best-settings for 100 individual games is
+not something that can be done reliably without per-game testing — instead
+each game is tagged with a genre, and each genre has an honest, generic
+best-practice settings guide (in-game graphics settings + the relevant
+OS-level tweaks already built elsewhere in this app). This is accurate and
+useful without pretending to be exact per-title benchmarked numbers.
+"""
+
+TEMPLATES = {
+    "competitive_fps": {
+        "fa": ["رزولوشن روی نیتیو مانیتور، Aspect Ratio دستکاری نشه",
+               "Shadows/Reflections = Low یا Off (دید بهتر، FPS بیشتر)",
+               "Anti-Aliasing = Off یا FXAA سبک",
+               "V-Sync = Off, فریم‌لیمیت روی چند فریم زیر مکس مانیتور",
+               "Field of View (FOV) رو تا حد امکان باز بذار",
+               "Texture Quality می‌تونه High بمونه (تأثیر کمی روی FPS داره)"],
+        "en": ["Resolution = native monitor resolution, don't force a stretched aspect ratio",
+               "Shadows/Reflections = Low or Off (better visibility, more FPS)",
+               "Anti-Aliasing = Off or light FXAA",
+               "V-Sync = Off, cap frame rate a few FPS below monitor max",
+               "Open up Field of View (FOV) as much as the game allows",
+               "Texture Quality can stay High (small FPS impact)"],
+    },
+    "battle_royale": {
+        "fa": ["رزولوشن نیتیو، Render Scale 90-100%",
+               "Shadows = Off, Foliage/Grass Quality = Low (دید بهتر توی بوته‌ها)",
+               "View Distance = High (برای دیدن دشمنان دورتر)",
+               "V-Sync = Off، Motion Blur = Off",
+               "روی SSD نصب باشه، لودینگ زون‌ها سریع‌تر می‌شه"],
+        "en": ["Native resolution, Render Scale 90-100%",
+               "Shadows = Off, Foliage/Grass Quality = Low (better bush visibility)",
+               "View Distance = High (spot enemies further away)",
+               "V-Sync = Off, Motion Blur = Off",
+               "Install on an SSD — zone loading is noticeably faster"],
+    },
+    "moba": {
+        "fa": ["رزولوشن نیتیو، Shadows = Off",
+               "Effects Quality = Medium (تشخیص اسکیل‌ها مهم‌تر از افکته)",
+               "V-Sync = Off, فریم‌ریت رو کپ نکن مگه دیوایست گرم می‌کنه",
+               "پینگ پایدار مهم‌تر از گرافیکه — تب Network Tweak رو حتماً بزن"],
+        "en": ["Native resolution, Shadows = Off",
+               "Effects Quality = Medium (reading skill shapes matters more than fancy effects)",
+               "V-Sync = Off, don't cap frame rate unless your system runs hot",
+               "Stable ping matters more than graphics — be sure to apply the Network Tweak tab"],
+    },
+    "open_world_aaa": {
+        "fa": ["Upscaling (DLSS/FSR/XeSS) روی Quality یا Balanced فعال کن",
+               "Shadows/Reflections = High (این ژانر جلوه‌های بصری مهمه)",
+               "Ray Tracing: فقط اگه GPU قدرتمند داری روشن کن",
+               "V-Sync روشن اگه Screen Tearing اذیت می‌کنه، وگرنه Frame Cap بهتره",
+               "Texture Quality = High/Ultra اگه VRAM کافی داری (۸ گیگ به بالا)"],
+        "en": ["Turn on Upscaling (DLSS/FSR/XeSS) at Quality or Balanced",
+               "Shadows/Reflections = High (visuals matter a lot in this genre)",
+               "Ray Tracing: only enable it if you have a powerful GPU",
+               "V-Sync on if screen tearing bothers you, otherwise a frame cap is better",
+               "Texture Quality = High/Ultra if you have enough VRAM (8GB+)"],
+    },
+    "survival_crafting": {
+        "fa": ["View/Render Distance رو بسته به RAM سیستم تنظیم کن، این ژانر حافظه زیاد می‌خواد",
+               "Shadows = Medium (تعادل بین دید و پرفورمنس)",
+               "V-Sync = Off برای واکنش سریع‌تر موقع مبارزه",
+               "اگه سرور آنلاین بازی می‌کنی، تب Network Tweak حتماً بزن"],
+        "en": ["Set View/Render Distance based on system RAM — this genre is memory-hungry",
+               "Shadows = Medium (balance between visibility and performance)",
+               "V-Sync = Off for faster reaction during combat",
+               "If you play on an online server, be sure to apply the Network Tweak tab"],
+    },
+    "racing_sim": {
+        "fa": ["فریم‌ریت رو تا جای ممکن بالا نگه‌دار (بالای ۱۴۴ اگه مانیتور پشتیبانی می‌کنه)",
+               "Motion Blur = Off (دید واضح‌تر پیچ‌ها)",
+               "V-Sync = Off یا G-Sync/FreeSync اگه مانیتورت داره",
+               "اگه فرمون/پدال داری، Polling Rate بالا و USB Selective Suspend رو خاموش کن (تب Power Plan)"],
+        "en": ["Keep frame rate as high as possible (above 144 if your monitor supports it)",
+               "Motion Blur = Off (clearer view through corners)",
+               "V-Sync = Off, or G-Sync/FreeSync if your monitor has it",
+               "If you use a wheel/pedals, keep polling rate high and disable USB Selective Suspend (Power Plan tab)"],
+    },
+    "sports": {
+        "fa": ["رزولوشن نیتیو، V-Sync = Off",
+               "Crowd/Grass Detail = Medium (تأثیر کمی روی گیم‌پلی داره)",
+               "Motion Blur = Off برای واکنش سریع‌تر"],
+        "en": ["Native resolution, V-Sync = Off",
+               "Crowd/Grass Detail = Medium (little gameplay impact)",
+               "Motion Blur = Off for faster reaction"],
+    },
+    "strategy_management": {
+        "fa": ["این ژانر GPU-bound نیست، CPU/RAM مهم‌تره — تب Ram Process رو بزن",
+               "Shadows/Effects می‌تونه Medium بمونه، تأثیر گیم‌پلی نداره",
+               "روی مپ‌های بزرگ، Zoom پایین می‌تونه FPS رو کم کنه — طبیعیه"],
+        "en": ["This genre is more CPU/RAM-bound than GPU-bound — apply the Ram Process tab",
+               "Shadows/Effects can stay Medium, no gameplay impact",
+               "On large maps, zooming out can drop FPS — that's normal, not a bug"],
+    },
+    "mmorpg": {
+        "fa": ["توی شهرهای شلوغ Character/NPC Detail رو کم کن برای FPS پایدارتر",
+               "Shadows = Low در محیط‌های شلوغ",
+               "پینگ پایدار حیاتیه — تب Network Tweak رو حتماً بزن"],
+        "en": ["Lower Character/NPC Detail in crowded cities for steadier FPS",
+               "Shadows = Low in busy areas",
+               "Stable ping is critical — be sure to apply the Network Tweak tab"],
+    },
+    "horror": {
+        "fa": ["Shadows/Lighting = High (این ژانر با نور و سایه کار می‌کنه)",
+               "Motion Blur و Film Grain طبق سلیقه (بعضیا حس‌وحال بازی رو بیشتر می‌کنن)",
+               "V-Sync روشن برای تصویر پایدارتر، این ژانر معمولاً نیاز به فریم بالا نداره"],
+        "en": ["Shadows/Lighting = High (this genre relies on light and shadow)",
+               "Motion Blur and Film Grain — personal taste (some enhance the atmosphere)",
+               "V-Sync on for a steadier image; this genre usually doesn't need very high frame rates"],
+    },
+    "fighting": {
+        "fa": ["فریم‌ریت پایدار مهم‌تر از فریم‌ریت بالاست — قفلش کن روی یه عدد ثابت",
+               "V-Sync = On اگه Input Lag محسوس نیست، وگرنه Off + Frame Cap",
+               "Effects Quality پایین‌تر برای دیدن فریم‌های حریف واضح‌تر"],
+        "en": ["Stable frame rate matters more than raw high frame rate — lock it to a fixed number",
+               "V-Sync = On if input lag isn't noticeable, otherwise Off + frame cap",
+               "Lower effects quality helps you read your opponent's frames more clearly"],
+    },
+    "action_rpg": {
+        "fa": ["Shadows/Lighting = High-Ultra (این ژانر روی جزئیات بصری تمرکز داره)",
+               "Upscaling (DLSS/FSR) رو برای فریم بیشتر با کیفیت نزدیک روشن کن",
+               "V-Sync طبق سلیقه، اکشن‌های سریع Off رو ترجیح می‌دن"],
+        "en": ["Shadows/Lighting = High-Ultra (this genre focuses on visual detail)",
+               "Turn on Upscaling (DLSS/FSR) for more frames at near-native quality",
+               "V-Sync is personal taste; fast action tends to prefer it Off"],
+    },
+    "coop_adventure": {
+        "fa": ["گرافیک معمولاً سبک‌تره، می‌تونی جزئیات رو بالا ببری بدون افت زیاد",
+               "V-Sync = On برای تجربه‌ی روون‌تر با دوستان",
+               "اگه آنلاین بازی می‌کنی، تب Network Tweak رو بزن تا لگ کمتر شه"],
+        "en": ["Graphics are usually lighter — you can push detail up without much FPS loss",
+               "V-Sync = On for a smoother co-op experience",
+               "If playing online, apply the Network Tweak tab to reduce lag"],
+    },
+    "sandbox_indie": {
+        "fa": ["اکثر این بازی‌ها روی سخت‌افزار متوسط هم روون اجرا می‌شن",
+               "Render Distance/World Detail رو طبق RAM سیستم تنظیم کن",
+               "V-Sync = On چون این بازی‌ها معمولاً نیازی به فریم خیلی بالا ندارن"],
+        "en": ["Most of these run smoothly even on mid-range hardware",
+               "Set Render Distance/World Detail based on system RAM",
+               "V-Sync = On since these games usually don't need very high frame rates"],
+    },
+}
+
+# genre -> ids of already-defined Tweak objects (from other tabs) worth suggesting
+GENRE_TWEAK_IDS = {
+    "competitive_fps": ["mouse_accel_off", "gamedvr_off", "fso_off", "nagle_off", "sys_responsiveness", "hags_on"],
+    "battle_royale": ["gamedvr_off", "fso_off", "nagle_off", "net_throttle_off", "large_system_cache_off"],
+    "moba": ["nagle_off", "net_throttle_off", "gamedvr_off"],
+    "open_world_aaa": ["hags_on", "tdr_delay", "large_system_cache_off"],
+    "survival_crafting": ["hags_on", "prefetch_ssd_off", "nagle_off"],
+    "racing_sim": ["hags_on", "usb_selective_suspend", "cpu_min_max_100"],
+    "sports": ["mouse_accel_off", "fso_off", "hags_on"],
+    "strategy_management": ["large_system_cache_off", "visual_fx_perf"],
+    "mmorpg": ["network_throttling", "nagle_off", "hags_on"],
+    "horror": ["hags_on", "fso_off"],
+    "fighting": ["mouse_accel_off", "priority_separation", "hags_on"],
+    "action_rpg": ["hags_on", "tdr_delay", "large_system_cache_off"],
+    "coop_adventure": ["network_throttling", "nagle_off"],
+    "sandbox_indie": ["prefetch_ssd_off", "large_system_cache_off"],
+}

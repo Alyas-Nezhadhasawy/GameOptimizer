@@ -1,0 +1,28 @@
+<svg width="1000" height="220" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gaming Optimizer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0d10"/>
+      <stop offset="100%" stop-color="#15171c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="220" fill="url(#bg)"/>
+  <rect x="0" y="0" width="10" height="220" fill="url(#accent)"/>
+  <g transform="translate(60,60)">
+    <rect x="0" y="0" width="52" height="52" rx="10" fill="url(#accent)"/>
+    <path d="M13 26 L26 13 L39 26 L26 39 Z" fill="#0b0d10"/>
+  </g>
+  <text x="60" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">
+    Gaming Optimizer
+  </text>
+  <text x="60" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#9aa0a6">
+    Windows 10/11 performance and tweak suite for gamers
+  </text>
+  <rect x="800" y="40" width="140" height="34" rx="6" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="870" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#e74c3c" text-anchor="middle">
+    Windows Only
+  </text>
+</svg>

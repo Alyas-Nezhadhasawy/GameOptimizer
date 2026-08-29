@@ -1,4 +1,3 @@
-[Uploading README.md…]()
 <p align="center">
   <img src="assets/banner.svg" alt="Gaming Optimizer" width="100%">
 </p>

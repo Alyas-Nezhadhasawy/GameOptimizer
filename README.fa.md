@@ -136,7 +136,7 @@ NVIDIA Control Panel، AMD Software یا تنظیمات ویندوز، رابط 
 ## نکات ایمنی
 
 <p>
-  <img src="assets/readme/warning.svg" width="16" height="16" alt="">
+  <img src="assets/readme/warning.svg" width="16" height="16" alt=""> 
   این برنامه رجیستری، پیکربندی بوت و سرویس‌های سیستمی ویندوز را تغییر
   می‌دهد. همیشه پیش از اعمال هر تغییری، از تب Start یک System Restore
   Point بسازید و فقط سوییچ‌هایی را فعال کنید که کارکردشان را می‌دانید.
@@ -147,7 +147,7 @@ NVIDIA Control Panel، AMD Software یا تنظیمات ویندوز، رابط 
 Issue و Pull Request خوش‌آمد هستند. لطفاً تنظیمات جدید را به‌صورت شیء
 `Tweak` در `data/` اضافه کنید، کد UI را در `ui/`/`tabs/` نگه دارید، و
 پیش از ارسال تغییراتی که به `core/` مربوط می‌شوند، برنامه را روی یک
-سیستم واقعی ویندوز تست کنید.
+سیستم واقعی ویندوز تست کنید      .
 
 ## لایسنس
 
